@@ -35,8 +35,6 @@ samp,
 small,
 strike,
 strong,
-sub,
-sup,
 tt,
 var,
 b,
@@ -87,11 +85,12 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-* {
-  padding: 0px;
-  margin: 0px;
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -109,29 +108,21 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
+
 ol,
 ul {
   list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
 }
 
+body {
+  background-color: #f9f9f9;
+}
 /* brand colors  */
 .primary-color {
   color: #000000;
@@ -139,19 +130,53 @@ table {
 .brand-color {
   color: #752226;
 }
-.brown {
+.brand-bg {
+  background-color: #752226;
+}
+.blue {
+  color: #181f4d;
+}
+.blue-bg {
+  background-color: #181f4d;
+}
+.black {
   color: #2c2c2c;
 }
-.brown-bg {
+.black-bg {
   background-color: #2c2c2c;
 }
-.py-14 {
-  padding-block: 14px;
+.grey{
+  color: #0D0E2599;
+}
+.grey-light{
+  color:#37363A;
+}
+.light-red{
+  background-color: #FAF0F0;
+}
+/* font family */
+.fm {
+  font-family: Poppins;
+}
+.fm-light {
+  font-family: Poppins-Light;
+}
+.text-weight-600{
+  font-weight: 600;
+}
+.text-weight-900{
+  font-weight: 900;
+}
+.text-weight-500{
+  font-weight: 500;
 }
 
 /* utilities */
 .text-center {
   text-align: center;
+}
+.text-left {
+  text-align: left;
 }
 .mx-auto {
   margin: auto;
@@ -168,12 +193,145 @@ table {
 .fx-jc {
   justify-content: center;
 }
+.fx-se {
+  justify-content: space-evenly;
+}
+.al-c {
+  align-items: center;
+}
+.flex-col{
+  flex-direction: column;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.pos-rel {
+  position: relative;
+}
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+.container-lg {
+  max-width: 1500px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+.py-14 {
+  padding-block: 14px;
+}
+.mr-40 {
+  margin-right: 40px;
+}
+.mr-34 {
+  margin-right: 34px;
+}
+.mb-14 {
+  margin-bottom: 14px;
+}
+.mb-36 {
+  margin-bottom: 36px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-60 {
+  margin-bottom: 60px;
+}
+.text-base {
+  font-size: 14.01px;
+  line-height: 28.24px;
+}
+.text-base-100 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.text-md {
+  font-size: 38.66px;
+  line-height: 50.92px;
+}
+.text-md-50 {
+  font-size: 22px;
+  line-height: 36.44px;
+}
+.text-md-100 {
+  font-size: 23px;
+  line-height: 36.44px;
+}
+.text-lg {
+  font-size: 54px;
+  line-height: 64px;
+}
+.text-desc {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #0d0e2599;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+.mx-w-154 {
+  max-width: 154px;
+}
+
+@font-face {
+  font-family: "Poppins-Extrabold";
+  src: url(./src/fonts/Poppins-ExtraBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(./src/fonts/Poppins-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(./src/fonts/Poppins-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(./src/fonts/Poppins-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./src/fonts/Poppins-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(./src/fonts/Poppins-Black.ttf) format("truetype");
+}
 
 /* styles */
 aside {
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 40.95px;
+  line-height: 22px;
   text-align: center;
+}
+
+.btn-flex {
+  width: 194px;
+  height: 62px;
+  background-color: #fff;
+  color: #000000;
+  border-radius: 1px;
+}
+
+.primary-btn {
+  padding: 18px;
+}
+.arrow-btn {
+  padding: 18px;
+}
+
+.feature-fold,
+.cta-fold,
+.benefit-fold,
+.product-fold,
+.hero-fold ,
+.founder-fold{
+  margin-bottom: 120px;
 }
