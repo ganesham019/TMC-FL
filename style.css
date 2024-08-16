@@ -124,6 +124,18 @@ body {
   background-color: #f9f9f9;
 }
 /* brand colors  */
+.light{
+  color: #F9F9F980;
+}
+.text-white {
+  color: #fff;
+}
+.text-black {
+  color: #000;
+}
+.bg-white{
+  background-color: #fff;
+}
 .primary-color {
   color: #000000;
 }
@@ -181,9 +193,6 @@ body {
 .mx-auto {
   margin: auto;
 }
-.text-white {
-  color: #fff;
-}
 .fx {
   display: flex;
 }
@@ -222,11 +231,26 @@ body {
 .py-14 {
   padding-block: 14px;
 }
+.py-20{
+  padding-block:20px ;
+}
+.px-6{
+  padding-inline: 6px;
+}
+.px-20{
+  padding-inline: 20px;
+}
 .mr-40 {
   margin-right: 40px;
 }
+.mr-30{
+  margin-right: 30px;
+}
 .mr-34 {
   margin-right: 34px;
+}
+.mb-8 {
+  margin-bottom: 8px;
 }
 .mb-14 {
   margin-bottom: 14px;
@@ -248,10 +272,7 @@ body {
   font-size: 16px;
   line-height: 24px;
 }
-.text-md {
-  font-size: 38.66px;
-  line-height: 50.92px;
-}
+
 .text-md-50 {
   font-size: 22px;
   line-height: 36.44px;
@@ -259,6 +280,22 @@ body {
 .text-md-100 {
   font-size: 23px;
   line-height: 36.44px;
+}
+.text-md-200 {
+  font-size: 30px;
+  line-height: 42.44px;
+}
+.text-md-250 {
+  font-size: 36px;
+  line-height: 42.44px;
+}
+.text-md-300 {
+  font-size: 40px;
+  line-height: 60px;
+}
+.text-md {
+  font-size: 38.66px;
+  line-height: 50.92px;
 }
 .text-lg {
   font-size: 54px;
@@ -331,7 +368,14 @@ aside {
 .cta-fold,
 .benefit-fold,
 .product-fold,
-.hero-fold ,
+.hero-fold,
+.product-strip,
+.future-plan-fold,
+.testimonial,
 .founder-fold{
   margin-bottom: 120px;
+}
+
+.hero-fold.product-page{
+  margin-bottom: 0px;
 }
