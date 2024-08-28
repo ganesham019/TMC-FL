@@ -376,6 +376,19 @@ aside {
   margin-bottom: 120px;
 }
 
+@media (min-width:280px) and (max-width:767px){
+  .feature-fold,
+.cta-fold,
+.benefit-fold,
+.product-fold,
+.hero-fold,
+.product-strip,
+.future-plan-fold,
+.testimonial,
+.founder-fold{
+  margin-bottom: 40px;
+}
+}
 .hero-fold.product-page{
   margin-bottom: 0px;
 }
