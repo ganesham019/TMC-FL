@@ -576,10 +576,17 @@ footer .container {
 }
 
 @media (min-width: 120px) and (max-width: 766px) {
+  .header-menus-list li a::after{
+    background-color: transparent;
+  }
+  .header-menus-list {
+    padding-top: 30%;
+  }
   .header-menus-list {
     & li {
       & a {
-        font-size: 14px;
+        font-size: 18px;
+        margin-right: 0px;
       }
     }
   }
@@ -657,7 +664,7 @@ footer .container {
     text-align: center;
   }
   .header-menus-list li {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .founder-wrap div img {
     height: 100%;
