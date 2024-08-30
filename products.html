@@ -15,29 +15,40 @@
       >
     </aside>
 
-    <!-- Header -->
-    <header class="header-nav">
-      <div class="container fx al-c">
-        <a href="products.html" class="header-logo pos-rel">
-          <img
-            src="./src/assets/logo.png"
-            alt="tmc logo"
-            width="133"
-            height="98"
-          />
-        </a>
-        <nav class="header-menus fx">
-          <ul class="header-menus-list fx">
-            <li><a href="index.html" class="text-center mr-40">Home</a></li>
-            <li><a href="about.html" class="text-center mr-40">About</a></li>
-            <li><a href="products.html" class="text-center mr-40">Products</a></li>
-            <li>
-              <a href="contact-us.html" class="text-center mr-40">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+   <!-- Header -->
+   <header class="header-nav">
+    <div class="container fx al-c">
+      <a href="index.html" class="header-logo pos-rel">
+        <img
+          src="./src/assets/logo.png"
+          alt="tmc logo"
+          width="133"
+          height="98"
+        />
+      </a>
+      <span class="hamburger pos-rel" id="hamburger"></span>
+      <nav class="header-menus fx">
+        <ul class="header-menus-list fx">
+          <li><a href="index.html" class="text-center mr-40">Home</a></li>
+          <li><a href="about.html" class="text-center mr-40">About</a></li>
+          <li><a href="products.html" class="text-center mr-40">Products</a></li>
+          <li>
+            <a href="contact-us.html" class="text-center mr-40">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="mobile-menus fx" id="mobile-menu">
+      <ul class="header-menus-list fx">
+        <li><a href="index.html" class="text-center mr-40">Home</a></li>
+        <li><a href="about.html" class="text-center mr-40">About</a></li>
+        <li><a href="products.html" class="text-center mr-40">Products</a></li>
+        <li>
+          <a href="contact-us.html" class="text-center mr-40">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
     <!-- Hero section -->
     <section class="hero-fold product-page pos-rel">
@@ -224,7 +235,7 @@
         <h3 class="fm text-md mb-36">
           Contact Us for the best deals <br />in bulk orders
         </h3>
-        <a href="/contactus.html" class="fm contact-btn blue"> Contact Us </a>
+        <a href="/contact-us.html" class="fm contact-btn blue"> Contact Us </a>
       </div>
       <div class="cta-img pos-rel">
         <img
@@ -445,5 +456,6 @@
         </div>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

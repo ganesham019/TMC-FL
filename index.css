@@ -438,8 +438,16 @@ footer .container {
     background-color: #181f4d;
   }
 }
-
-@media (min-width: 280px) and (max-width: 1200px) {
+.mobile-menus {
+  display: none;
+}
+.hamburger {
+  display: none;
+}
+.header-logo {
+  line-height: 0;
+}
+@media (min-width: 120px) and (max-width: 1200px) {
   .footer div {
     padding: 20px;
     text-align: center;
@@ -567,13 +575,89 @@ footer .container {
   }
 }
 
-@media (min-width: 280px) and (max-width: 766px) {
+@media (min-width: 120px) and (max-width: 766px) {
   .header-menus-list {
     & li {
       & a {
         font-size: 14px;
       }
     }
+  }
+  .header-nav {
+    & a {
+      top: 10px;
+    }
+  }
+  .header-logo img {
+    height: 70px;
+    width: 100%;
+  }
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    height: 2px;
+    width: 36px;
+    background-color: #181f4d;
+    position: relative;
+    transition: rotate 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background-color: #181f4d;
+  }
+  .hamburger::after {
+    top: 12px;
+  }
+  .hamburger::before {
+    top: -12px;
+  }
+
+  .hamburger.active {
+    background-color: #fff;
+    transition: rotate 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .hamburger.active::before {
+    rotate: 311deg;
+    top: 0;
+    transition: rotate 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .hamburger.active::after {
+    rotate: 45deg;
+    top: 0;
+    transition: rotate 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .mobile-menus {
+    display: block;
+    position: absolute;
+    width: 100%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Specify the properties you want to animate */
+  }
+
+  .mobile-menus.active {
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+    display: block;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Specify the properties you want to animate */
+  }
+  .header-menus {
+    display: none;
+  }
+  .header-menus-list {
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+  }
+  .header-menus-list li {
+    margin-bottom: 20px;
   }
   .founder-wrap div img {
     height: 100%;
@@ -634,16 +718,17 @@ footer .container {
     padding-left: 0px;
   }
   .header-nav .container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  .header-menus {
+  /* .header-menus {
     margin-left: 2%;
-  }
-  .header-nav {
+  } */
+  /* .header-nav {
     & a {
       top: 14px !important;
     }
-  }
+  } */
   .screw-img {
     /* width: 300px;
     height: 200px;
